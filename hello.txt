@@ -1,0 +1,24 @@
+/*const express = require("express");
+const app = express();
+const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: true }));
+app.get("/calculator", (req, resp) => {
+  resp.sendFile(__dirname + "/index.html");
+});
+
+app.post("/calculator", (req, resp) => {
+  let a = Number(req.body.v1);
+  let b = Number(req.body.v2);
+
+  let sum = a + b;
+  resp.send(`The Sum is ${sum}`);
+});
+
+app.listen(3000, () => {
+  console.log("Server is Started...");
+});
+*/
+
+const { add, sub } = require("./cal");
+console.log(add(15, 53));
+console.log(sub(150, 16));
